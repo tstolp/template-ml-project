@@ -1,0 +1,17 @@
+
+experiment_name: test_${now:%Y_%m_%d}
+
+project_dir: 'D:/template-ml-project'
+
+save_dir: '${project_dir}/experiments'
+model_dir: '${save_dir}/${experiment_name}'
+log_dir: '${save_dir}/${experiment_name}/log'
+
+n_trials: 3
+epochs: 2
+pruning: True
+load_if_exists: False
+
+hydra:
+  run:
+    dir: ${save_dir}/${experiment_name}/log    
